@@ -1,0 +1,185 @@
+.work-section {
+    padding-bottom: 80px;   
+}
+
+.work {
+}
+.work__title-wrapper{
+    max-width: 500px;
+    margin-bottom: 56px;
+}
+.work__title {
+    @include textStyle($MB:32px, $FS:48px, $FW:600, $CLR:$title-clr, $LH:60px);
+    font-family: 'Exo 2', sans-serif;
+}
+.work__text {
+    @include textStyle($MB:0px, $FS:16px, $FW:400, $CLR:$text-clr, $LH:24px);
+}
+.work__list {
+    @include Display($items:center, $space:space-between, $gap:0px);
+}
+.work__item {
+    width: 393px;
+    padding: 271px 0 42px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
+    background: $white-clr;
+    background-image: url(../images/work-first.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center;
+   
+}
+.work__item--second-img{
+    background-image: url(../images/work-second.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center;
+}
+.work__item-third-img{
+    background-image: url(../images/work-third.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center;
+}
+.work__content-wrapper {
+    max-width: 317px;
+    width: 100%;
+    padding-left: 32px;
+}
+.work__subtitle {
+    @include textStyle($MB:16px, $FS:20px, $FW:600, $CLR:$title-clr, $LH:27px);
+    font-family: 'Exo 2', sans-serif;
+}
+.work__subtext {
+    @include textStyle($MB:32px, $FS:16px, $FW:400, $CLR:$text-clr, $LH:24px);
+}
+.work__price {
+    @include textStyle($MB:0px, $FS:16px, $FW:600, $CLR:$title-clr, $LH:21px);
+    font-family: 'Exo 2', sans-serif;
+    padding-bottom: 6px;
+    border-bottom: 4px solid $yellow-clr;
+}
+
+// medai tablet
+@media (max-width:1227px){
+    
+ .work__list {
+        @include Display($items:center, $space:center, $gap:32px);
+        flex-direction:column ;
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width:800px){
+    .work-section {
+        padding-bottom: 44px;   
+    }
+    .work__title {
+        @include textStyle($MB:32px, $FS:44px, $FW:600, $CLR:$title-clr, $LH:55px);
+        font-family: 'Exo 2', sans-serif;
+    }
+    .work__text {
+        @include textStyle($MB:0px, $FS:15px, $FW:400, $CLR:$text-clr, $LH:22.5px);
+    }
+    .work__title-wrapper{
+        margin-bottom: 40px;
+    }
+    
+    .work__item {
+        width: 100%;
+        padding: 271px 0 40px ;
+        border-radius: 10px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
+        background: $white-clr;
+        background-image: url(../images/work-tablet-first-img.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top center;
+       
+    }
+    .work__item--second-img{
+        background-image: url(../images/work-tablet-second-img.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: top center;
+    }
+    .work__item-third-img{
+       display: none;
+    }
+    .work__content-wrapper {
+        max-width: 100%;
+        padding: 0 140px 0 32px;
+    }
+    
+}
+
+@media (max-width:680px){
+    .work__item {
+        padding: 230px 0 40px ;
+       
+    }
+}
+@media (max-width:550px){
+    .work-section {
+        padding-bottom: 28px;   
+    }
+    .work__title {
+        @include textStyle($MB:24px, $FS:28px, $FW:600, $CLR:$title-clr, $LH:35px);
+        font-family: 'Exo 2', sans-serif;
+    }
+    .work__title-wrapper{
+        margin-bottom: 32px;
+    }
+    
+    .work__item {
+        padding: 348px 0 40px ;
+        background-image: url(../images/work-mobile-img.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top center;
+       
+    }
+    .work__item--second-img{
+        display: none;
+    }
+    
+    .work__content-wrapper {
+        max-width: 100%;
+        padding: 0 10px 0 32px;
+    }
+    .work__subtitle {
+        @include textStyle($MB:16px, $FS:18px, $FW:600, $CLR:$title-clr, $LH:24px);
+        font-family: 'Exo 2', sans-serif;
+    }
+    .work__subtext {
+        @include textStyle($MB:24px, $FS:15px, $FW:400, $CLR:$text-clr, $LH:22px);
+    }
+    .work__price {
+        @include textStyle($MB:0px, $FS:15px, $FW:600, $CLR:$title-clr, $LH:20px);
+        font-family: 'Exo 2', sans-serif;
+        padding-bottom: 6px;
+        border-bottom: 4px solid $yellow-clr;
+    }
+}
+@media (max-width:500px){
+    .work__item {
+        padding: 308px 0 40px ;
+    }
+}
+@media (max-width:450px){
+    .work__item {
+        padding: 268px 0 40px ;
+    }
+}
+@media (max-width:400px){
+    .work__item {
+        padding: 228px 0 40px ;
+    }
+}
+@media (max-width:350px){
+    .work__item {
+        padding: 198px 0 40px ;
+    }
+}

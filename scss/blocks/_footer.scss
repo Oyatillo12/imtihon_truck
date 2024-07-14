@@ -1,0 +1,326 @@
+.site-footer {
+    padding: 59px 0 29px;
+    background-color: $green-clr;
+}
+
+.footer {
+    @include Display($items:top, $space:space-between, $gap:0px);
+    margin-bottom: 80px;
+}
+.footer__logo-link {
+    display: inline-block;
+    @include textStyle($MB:0px, $FS:60px, $FW:500, $CLR:$white-clr, $LH:90px);
+    letter-spacing: 7px;
+    font-family: 'Familjen Grotesk';
+}
+.footer__menu--wrapper, .footer__model--wrapper, .footer__contact {
+    max-width: 134px;
+    padding-top: 21px;
+}
+.footer__menu-name {
+    display: block;
+    @include textStyle($MB:25px, $FS:13px, $FW:600, $CLR:$white-clr, $LH:19px);
+    font-family: 'Exo 2', sans-serif;
+    letter-spacing: 2px;
+}
+.footer__menu-list {
+    @include Display($items:start, $space:start, $gap:48px);
+    flex-direction: column;
+    width: 100%;
+}
+.footer__menu-model-wrapper{
+        @include Display($items:top, $space:start, $gap:90px);
+}
+.footer__menu-link, .footer__modal-link {
+    @include textStyle($MB:0px, $FS:13px, $FW:500, $CLR:$white-clr, $LH:19px);
+    font-family: 'Exo 2', sans-serif;
+    letter-spacing: 2.50px;
+    transition: all 0.3s linear;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.footer__model--wrapper {
+    max-width: 120px;
+}
+
+.footer__modal-list {
+    @include Display($items:start, $space:start, $gap:25px);
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.footer__contact {
+    max-width: 271px;
+    width: 100%;
+    @include Display($items:start, $space:start, $gap:0px);
+    flex-direction: column;
+}
+.footer__socia-list {
+    @include Display($items:center, $space:start, $gap:14px);
+    margin-bottom: 67px;
+}
+
+.footer-socia-link {
+    width: 27px;
+    color: $white-clr;
+    display: inline-block;
+    height: 27px;
+    text-align: center;
+    padding-top: 4px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid $white-clr;
+    transition: all 0.3s linear;
+    &:hover{
+        color: $green-clr;
+        border-color: $yellow-clr;
+        background-color:$yellow-clr ;
+    }
+}
+.footer__contact-phone{
+    @include textStyle($MB:48px, $FS:13px, $FW:500, $CLR:$white-clr, $LH:19px);
+    font-family: 'Exo 2', sans-serif;
+    transition: all 0.3s linear;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.footer__contact-btn {
+    @include buttonStyle($BTN_W:100%, $BTN_PY:8px, $BTN_BG_CLR:rgba(255, 150, 25, 1), $BTN_BR_Radius:0, $BTN_Border_CLR:rgba(255, 150, 25, 1),$BTN_FS:13px,$BTN_FW:600, $BTN_LH:19px, $BTN_CLR:$white-clr,$BTN_CASE:uppercase);
+    display: block;
+    font-family: 'Open sans', sans-serif;
+    text-align: left;
+    padding: 11px 11px;
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 8px;
+        top: 0;
+        bottom: 0;
+        right: 9px;
+        margin: auto 0;
+        background-image: url(../images/Arrow-img.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+        
+    }
+    &:hover{
+        background-color: transparent;
+        border-color: rgba(255, 150, 25, 1);
+    }
+}   
+.footer__text {
+    text-align: center;
+    @include textStyle($MB:0px, $FS:12px, $FW:500, $CLR:$white-clr, $LH:18px);
+    letter-spacing: 2.6px;
+    font-family: 'Exo 2',sans-serif;
+
+}
+
+// media tablet start
+
+@media (max-width:900px){
+    .site-footer {
+        padding: 30px 0 29px;
+    }
+    .footer {
+        margin-bottom: 35px;
+    }
+    .footer__logo-link {
+        @include textStyle($MB:0px, $FS:30px, $FW:500, $CLR:$white-clr, $LH:45px);
+        letter-spacing: 5.2px;
+        font-family: 'Familjen Grotesk';
+    }
+    .footer__menu-model-wrapper{
+        @include Display($items:top, $space:start, $gap:60px);
+}
+    .footer__menu--wrapper, .footer__model--wrapper, .footer__contact {
+        max-width: 101px;
+        padding-top: 10px;
+    }
+    .footer__menu-name {
+        @include textStyle($MB:13px, $FS:8px, $FW:600, $CLR:$white-clr, $LH:12px);
+        font-family: 'Exo 2', sans-serif;
+        letter-spacing: 1.9px;
+    }
+    .footer__menu-list {
+        @include Display($items:start, $space:start, $gap:27px);
+    }
+    .footer__menu-link, .footer__modal-link {
+        @include textStyle($MB:0px, $FS:8px, $FW:500, $CLR:$white-clr, $LH:12px);
+        font-family: 'Exo 2', sans-serif;
+        letter-spacing: 2px;
+        
+    }
+    .footer__model--wrapper {
+        max-width: 91px;
+        width: 100%;
+    }
+    .footer__modal-list {
+        @include Display($items:start, $space:start, $gap:11px);
+    }
+    .footer__contact {
+        width: 100%;
+        max-width: 144px;
+    }
+    .footer__socia-list {
+        @include Display($items:center, $space:start, $gap:12px);
+        margin-bottom: 48px;
+    }
+    .footer-socia-link {
+        width: 14px;
+        height: 14px;
+        padding-top: 0px;
+        position: relative;
+        display: grid;
+        place-items: center;
+    }
+    .footer-icon-svg {
+        width: 8px;
+        height: 9px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;   
+    }
+    .footer-icon-second-svg{
+        width: 5px;
+        height: 9px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0; 
+    }
+    .footer__contact-phone{
+        @include textStyle($MB:41px, $FS:8px, $FW:500, $CLR:$white-clr, $LH:12px);
+        font-family: 'Exo 2', sans-serif;
+       
+    }
+    .footer__contact-btn {
+        @include buttonStyle($BTN_W:100%, $BTN_PY:0px, $BTN_BG_CLR:rgba(255, 150, 25, 1), $BTN_BR_Radius:0, $BTN_Border_CLR:rgba(255, 150, 25, 1),$BTN_FS:6px,$BTN_FW:600, $BTN_LH:9px, $BTN_CLR:$white-clr,$BTN_CASE:uppercase);
+        font-family: 'Open sans', sans-serif;
+        padding: 8px 8px;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 9px;
+            height: 9px;
+            top: 0;
+            bottom: 0;
+            right: 6px;
+            margin: auto 0;
+            background-image: url(../images/arrow-tablet-img.svg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    }
+    .footer__text {
+        @include textStyle($MB:0px, $FS:10px, $FW:500, $CLR:$white-clr, $LH:15px);
+        font-family: 'Exo 2',sans-serif;
+    }
+}
+
+// media tablet end
+
+
+// media mobile start
+
+@media (max-width:550px){
+    .site-footer {
+        padding: 14px 0 29px;
+    }
+    .footer {
+        margin-bottom: 16px;
+        flex-direction: column;
+    }
+    .footer__logo-link {
+        @include textStyle($MB:23px, $FS:20px, $FW:500, $CLR:$white-clr, $LH:30px);
+        letter-spacing: 4px;
+        font-family: 'Familjen Grotesk';
+    }
+    .footer__menu-model-wrapper{
+        @include Display($items:top, $space:start, $gap:50px);
+        margin-bottom: 25px;
+    }
+    .footer__menu--wrapper, .footer__model--wrapper, .footer__contact {
+        max-width: 81px;
+        padding-top: 0px;
+    }
+    .footer__menu-name {
+        margin-bottom: 26px;
+    }
+    .footer__menu-list {
+        @include Display($items:start, $space:start, $gap:27px);
+    }
+
+    .footer__model--wrapper {
+        max-width: 82px;
+        width: 100%;
+    }
+    .footer__modal-list {
+        @include Display($items:start, $space:start, $gap:10px);
+    }
+    .footer__contact {
+        max-width: 100%;
+        text-align: left;
+    }
+    .footer__socia-list {
+        @include Display($items:center, $space:start, $gap:12px);
+        margin-bottom: 63px;
+    }
+    .footer-socia-link {
+        width: 10px;
+        height: 10px;
+        position: relative;
+        display: grid;
+        place-items: center;
+    }
+    .footer-icon-svg {
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;   
+    }
+    .footer-icon-second-svg{
+        width: 3px;
+        height: 5.8px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0; 
+    }
+    .footer__contact-phone{
+        @include textStyle($MB:23px, $FS:8px, $FW:500, $CLR:$white-clr, $LH:12px);
+        font-family: 'Exo 2', sans-serif;
+       
+    }
+    .footer__contact-btn {
+        @include buttonStyle($BTN_W:100%, $BTN_PY:0px, $BTN_BG_CLR:rgba(255, 150, 25, 1), $BTN_BR_Radius:0, $BTN_Border_CLR:rgba(255, 150, 25, 1),$BTN_FS:10px,$BTN_FW:600, $BTN_LH:15px, $BTN_CLR:$white-clr,$BTN_CASE:uppercase);
+        font-family: 'Open sans', sans-serif;
+        padding: 8px 0px 8px 60px;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 8px;
+            top: 0;
+            bottom: 0;
+            right: 14px;
+            margin: auto 0;
+            background-image: url(../images/Arrow-img.svg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    }
+}
+
+// media mobile end
